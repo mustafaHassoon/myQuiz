@@ -11,7 +11,7 @@ export class AppComponent {
   answers: Answers;
   quiz: Quiz;
   currentQuestionIndex: number;
-  private showResults = false;
+  showResults = false;
 
   constructor(private questionsService: QuestionsService) {
     this.questionsService.getJSON('french').subscribe(data => {
