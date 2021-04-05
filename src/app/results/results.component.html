@@ -1,0 +1,22 @@
+<br />
+<br />
+<div class="container jumbotron text-center">
+  <div class="results">
+    <h2>Results</h2>
+    <div class="answer" *ngFor="let a of answers.values" [ngClass]="{ correct: a.correct }">
+      {{ a.value }}
+    </div>
+    <a routerLink="/welcome" class="btn btn-outline-dark">Choose another quiz</a>
+  </div>
+</div>
+<br />
+<br />
+
+
+
+<!-- <div class="results">
+  <h2>Results</h2>
+  <div class="answer" *ngFor="let a of answers.values" [ngClass]="{correct: a.correct}">
+    {{a.value}}
+  </div>
+</div> -->
