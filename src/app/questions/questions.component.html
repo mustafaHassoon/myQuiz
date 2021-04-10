@@ -1,22 +1,22 @@
-<div *ngIf="quiz && !questions" class="spinner-grow text-primary">
+<div *ngIf="quiz && !questions" class="spinner-grow text-primary"></div>
 
-  <div class="quiz" *ngIf="questions" text-center>
+<div class="quiz" *ngIf="questions">
 
-    <div class="questions" *ngIf="!showResults" text-center>
-      <app-question-form [question]="questions[currentQuestionIndex]" (onChoiceMade)="updateChoice($event)">
-      </app-question-form>
-    </div>
-    <button class="btn btn-success" (click)="nextOrViewResults()" [disabled]="!answers.values[currentQuestionIndex]"
-      text-center>{{currentQuestionIndex === questions.length - 1 ? 'View
+  <div class="questions" *ngIf="!showResults">
+    <app-question-form [question]="questions[currentQuestionIndex]" (onChoiceMade)="updateChoice($event)">
+    </app-question-form>
+
+    <button class="btn btn-success" (click)="nextOrViewResults()"
+      [disabled]="!answers.values[currentQuestionIndex]">{{currentQuestionIndex === questions.length - 1 ? 'View
       results' : 'Next'}}</button>
 
 
-
-
-    <app-results *ngIf="showResults" [answers]="answers"></app-results>
   </div>
 
+  <app-results *ngIf="showResults" [answers]="answers"></app-results>
 </div>
+
+
 
 <!-- <div *ngIf="quiz && !questions" class="spinner-grow text-primary"></div>
 
