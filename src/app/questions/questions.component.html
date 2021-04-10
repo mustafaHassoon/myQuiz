@@ -1,8 +1,8 @@
 <div *ngIf="quiz && !questions" class="spinner-grow text-primary"></div>
 
-<div class="quiz" *ngIf="questions">
+<div class="quiz" *ngIf="questions" text-center>
 
-  <div class="questions" *ngIf="!showResults">
+  <div class="questions" *ngIf="!showResults" text-center>
     <app-question-form [question]="questions[currentQuestionIndex]" (onChoiceMade)="updateChoice($event)">
     </app-question-form>
 
